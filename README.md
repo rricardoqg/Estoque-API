@@ -27,7 +27,11 @@ python -m venv venv
 venv\Scripts\activate
 
 # Instale as dependências
-pip install fastapi uvicorn sqlalchemy
+pip install -r requirements.txt
+
+# Configure as variáveis de ambiente
+# Crie um arquivo .env na raiz do projeto com o conteúdo:
+# DATABASE_URL=sqlite:///./estoque.db
 
 # Rode a aplicação
 uvicorn app.main:app --reload
